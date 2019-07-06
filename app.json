@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/blog/blog-list",
+    "pages/blog/blog-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "IT姑凉博客",
+    "navigationBarTextStyle": "white"
+  }
+}

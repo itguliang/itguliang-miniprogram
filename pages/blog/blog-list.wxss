@@ -1,0 +1,18 @@
+/* pages/blog/blog-list.wxss */
+@import "/wxParse/wxParse.wxss";
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  align-items: left;
+}
+.blog-item {
+  padding: 30rpx 0;
+  border-bottom:1px dashed #ccc;
+}
+.time{
+  margin-right: 10rpx;
+  color:grey;
+  font-size: 12px;
+  padding:2px 0;
+}

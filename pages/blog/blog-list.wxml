@@ -1,0 +1,22 @@
+<wxs module="m1">
+  function format(ts) {
+    var date = getDate(ts);
+    var m=date.getMonth()+1;
+    var d=date.getDate();
+    if(m<10){
+       m='0'+ m;
+    }
+    if(d<10){
+       d='0'+ d;
+    }
+    return [date.getFullYear(), m, d].join('.');
+  }
+  module.exports.format = format
+</wxs>
+<view class="blog-list">
+  <block wx:key="index" wx:for="{{blogList}}" wx:for-item="blog">
+    <navigator url="/pages/blog/blog-detail?blogId={{blog._id}}" class="blog-item">
+      <text class="time">{{ m1.format(blog.time) }}</text>{{blog.title}} </navigator>
+  </block>
+  <text wx:if="{{loading}}"class="loading">加载中... </text>
+</view>
