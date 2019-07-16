@@ -1,18 +1,32 @@
 /* pages/blog/blog-list.wxss */
-@import "/wxParse/wxParse.wxss";
 .blog-list {
   display: flex;
   flex-direction: column;
-  padding: 30rpx;
+  padding: 0 30rpx;
   align-items: left;
 }
 .blog-item {
   padding: 30rpx 0;
-  border-bottom:1px dashed #ccc;
+  width: 100%;
 }
+.blog-item+.blog-item {
+  border-top:1px dashed #ccc;
+}
+
+.blog-item image{
+  width: 100%;
+}
+
 .time{
   margin-right: 10rpx;
   color:grey;
-  font-size: 12px;
+  font-size: 24rpx;
   padding:2px 0;
+}
+.loading{
+  width: 100%;
+  text-align: center;
+  margin:20px 0;
+  font-size: 24rpx;
+  color:grey;
 }

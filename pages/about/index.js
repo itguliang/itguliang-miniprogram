@@ -10,9 +10,16 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
-  bindViewTap: function() {
+  versionInfo: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../version/version'
+    })
+  },
+  qrcodePreview: function (e) {
+    var current = "http://img.itguliang.com/qrcode-itguliang.png";
+    wx.previewImage({
+      current: current,
+      urls: [current]
     })
   },
   toBlogList: function () {

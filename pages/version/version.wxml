@@ -1,0 +1,19 @@
+<!--pages/version/version.wxml-->
+<view class="version-list">
+  <block wx:key="index" wx:for="{{versionData}}" wx:for-item="item">
+    <view class='item'>
+      <view class='circle-con'>
+        <view class='circle'></view>
+      </view>
+      <view class='content'>
+        <view class='version-title'>
+          <Text class='version'>{{item.version}}</Text>
+          <Text class='time'>{{item.time}}</Text>
+        </view>
+        <view class='version-info'>
+          <rich-text nodes="{{item.info}}"></rich-text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

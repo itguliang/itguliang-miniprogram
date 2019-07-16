@@ -1,0 +1,55 @@
+/* pages/version/version.wxss */
+
+.version-list {
+  background: #fff;
+  padding: 30rpx 60rpx;
+}
+
+.item {
+  position: relative;
+}
+
+.circle-con {
+  position: absolute;
+  top: 0;
+  left: -8rpx;
+  background: #fff;
+  padding: 20rpx 0;
+}
+
+.circle {
+  border: 4rpx solid #ddd;
+  border-radius: 10rpx;
+  width: 12rpx;
+  height: 12rpx;
+  background: #fff;
+}
+
+.content {
+  border-left: 1px solid #ddd;
+  padding: 0 10rpx 0 60rpx;
+}
+
+.version, .time {
+  border: 1px solid #aaa;
+  font-size: 32rpx;
+  padding: 6rpx 14rpx;
+}
+
+.version {
+  background: #aaa;
+  color: white;
+  margin-left: -2rpx;
+}
+
+.time {
+  color: #aaa;
+}
+
+.version-info {
+  margin-top:10rpx;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color: #444;
+}

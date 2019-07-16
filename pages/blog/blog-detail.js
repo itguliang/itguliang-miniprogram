@@ -16,6 +16,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showToast({
+        title: '加载中....',
+        icon: 'loading'
+      })
     this.setData({
       blogId: options.blogId
     });
@@ -32,9 +36,10 @@ Page({
             content: WxParse.wxParse('content', 'html', res.data.content, that, 5)
           }
         });
-        
+        wx.hideToast();
       },
       fail: function (res) {
+        wx.hideToast();
         console.log(res)
       }
     })

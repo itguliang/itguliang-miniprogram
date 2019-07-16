@@ -1,14 +1,35 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/blog/blog-list",
-    "pages/blog/blog-detail"
+    "pages/blog/blog-detail",
+    "pages/version/version",
+    "pages/about/index"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#000",
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "IT姑凉博客",
-    "navigationBarTextStyle": "white"
-  }
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#e8989a",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/blog/blog-list",
+        "selectedIconPath": "images/home-sel.png",
+        "iconPath": "images/home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "selectedIconPath": "images/user-sel.png",
+        "iconPath": "images/user.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }
