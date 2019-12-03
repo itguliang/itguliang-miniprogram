@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="account">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class='list'>
+    <view class='item' bindtap="qrcodePreview">
+      <text>公众号</text>
+      <text class='arrow'></text>
+    </view>
+    <view class='item' bindtap="versionInfo">
+      <text>版本信息</text>
+      <text class='arrow'></text>
+    </view>
+  </view>
+</view>

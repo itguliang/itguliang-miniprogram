@@ -1,13 +1,13 @@
 <wxs module="m1">
   function format(ts) {
     var date = getDate(ts);
-    var m=date.getMonth()+1;
-    var d=date.getDate();
-    if(m<10){
-       m='0'+ m;
+    var m = date.getMonth() + 1;
+    var d = date.getDate();
+    if (m < 10) {
+      m = '0' + m;
     }
-    if(d<10){
-       d='0'+ d;
+    if (d < 10) {
+      d = '0' + d;
     }
     return [date.getFullYear(), m, d].join('.');
   }
@@ -16,7 +16,17 @@
 <view class="blog-list">
   <block wx:key="index" wx:for="{{blogList}}" wx:for-item="blog">
     <navigator url="/pages/blog/blog-detail?blogId={{blog._id}}" class="blog-item">
-      <text class="time">{{ m1.format(blog.time) }}</text>{{blog.title}} </navigator>
+      <view>{{blog.title}}</view>
+      <view wx:if="{{blog.cover}}">
+        <image mode="widthFix" src="{{blog.cover}}"></image>
+      </view>
+      <view class="time">{{ m1.format(blog.time) }}</view>
+    </navigator>
   </block>
-  <text wx:if="{{loading}}"class="loading">加载中... </text>
+  <view wx:if="{{loading}}" class="loading">
+    正在加载
+  </view>
+  <view wx:if="{{!loadMore}}" class="loading">
+    --- 我们是有底线的 ---
+  </view>
 </view>

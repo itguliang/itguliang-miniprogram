@@ -1,9 +1,12 @@
 <!--pages/blog/blog-detail.wxml-->
-<import src="../../wxParse/wxParse.wxml"/>
+<!-- <import src="../../wxParse/wxParse.wxml"/> -->
+<import src="../../towxml/entry.wxml"/>
+
 <view class="blog-detail">
   <text wx:if="{{blogData.title}}" class="blog-title">{{blogData.title}}</text>
   <view class="blog-content">
-    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+    <!-- <template is="wxParse" data="{{wxParseData:content.nodes}}"/> -->
+    <template is="entry" data="{{...blogData.content}}"/>
   </view>
 </view>
 

@@ -1,4 +1,5 @@
 //app.js
+const Towxml = require('/towxml/main');   //引入towxml库
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -35,5 +36,6 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+  towxml: new Towxml()
 })
